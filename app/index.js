@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import FlightPlanner from "./components/FlightPlanner";
 
-class App extends React.Component {
-  render() {
-    return(
-      <div>Hello World!</div>
-    )  
-  }
+function App() {
+  return (
+    <div className="container">
+      <h1>Drone Flight Planner</h1>
+      <FlightPlanner />
+    </div>
+  );
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'));
-
+ReactDOM.render(<App />, document.getElementById("app"));

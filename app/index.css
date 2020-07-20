@@ -1,3 +1,40 @@
-body {
-  background-color: green;
+html,
+* {
+  box-sizing: border-box;
+}
+
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.flight-planner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flight-plans {
+  flex: 0 0 30%;
+}
+
+.flight-plan-detail {
+  flex: 0 0 70%;
 }
