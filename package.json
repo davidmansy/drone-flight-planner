@@ -1,0 +1,48 @@
+{
+  "name": "drone-flight-planner",
+  "version": "1.0.0",
+  "description": "Web app to build drone flight plans",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV='production' webpack",
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmansy/drone-flight-planner.git"
+  },
+  "keywords": [
+    "drone",
+    "flight",
+    "planner"
+  ],
+  "author": "David Mansy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidmansy/drone-flight-planner/issues"
+  },
+  "homepage": "https://github.com/davidmansy/drone-flight-planner#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
