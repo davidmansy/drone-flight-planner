@@ -4,3 +4,6 @@ dist
 .vscode
 .prettierrc
 .env
+.firebase/
+.firebaserc
+firebase.json
