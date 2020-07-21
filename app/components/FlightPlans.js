@@ -9,7 +9,7 @@ function FlightPlans({ plans, selectedPlan, handleSelectedPlan }) {
         <ul>
           {plans.map((plan) => {
             return (
-              <li>
+              <li key={plan.id}>
                 <div
                   className={`plan-list-item ${
                     selectedPlan === plan ? "selected" : ""
