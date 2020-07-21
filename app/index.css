@@ -1,17 +1,37 @@
-html,
 * {
   box-sizing: border-box;
 }
 
+html,
 body,
 #app {
-  margin: 0;
   height: 100%;
+  margin: 0;
   width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h5 {
+  font-size: 13px;
+  font-weight: 300;
+  margin: 10px 5px;
 }
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -19,22 +39,73 @@ li {
 }
 
 .container {
+  height: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px;
-  text-align: center;
 }
 
 .flight-planner {
+  align-items: flex-start;
   display: flex;
+  height: 100%;
   justify-content: center;
-  align-items: center;
 }
 
 .flight-plans {
-  flex: 0 0 30%;
+  background-color: #f7f9fa;
+  display: flex;
+  flex: 0 0 20%;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.plan-list-item {
+  border-left: 5px solid transparent;
+  cursor: pointer;
+  font-size: 15px;
+  height: 28px;
+  padding: 5px 0 0 15px;
+}
+
+.plan-list-item:hover {
+  font-weight: 500;
+}
+
+.plan-list-item.selected {
+  border-left-color: black;
+  font-weight: 500;
+}
+
+.plan-list-add {
+  padding: 10px 15px;
+}
+
+.plan-list-add button {
+  align-items: center;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+
+.plan-list-add button:hover {
+  box-shadow: rgb(107, 121, 137) 0px 0px 16px;
+  border-color: rgb(107, 121, 137);
+}
+
+.plan-list-add-symbol {
+  font-size: 28px;
+  margin-right: 10px;
 }
 
 .flight-plan-detail {
-  flex: 0 0 70%;
+  flex: 0 0 80%;
+  text-align: center;
 }
