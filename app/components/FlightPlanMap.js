@@ -40,6 +40,8 @@ const polyLineOptions = {
   zIndex: 1,
 };
 
+const API_KEY = process.env.GOOGLE_MAP_API_KEY;
+
 function FlightPlanMap({ initPath, updatePath }) {
   const [lastSavedPath, setLastSavedPath] = React.useState(initPath);
   const [path, setPath] = React.useState(initPath);
@@ -75,7 +77,7 @@ function FlightPlanMap({ initPath, updatePath }) {
 
   return (
     <React.Fragment>
-      <LoadScript googleMapsApiKey="AIzaSyDF5vz5qzYYx22uBXUqINSM2PNZMqsF6kw">
+      <LoadScript googleMapsApiKey={API_KEY}>
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={path[0]}
