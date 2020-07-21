@@ -1,11 +1,11 @@
 import React from "react";
 import FlightPlanMap from "./FlightPlanMap";
 
-function FlightPlanDetail({ plan, updatePath }) {
+function FlightPlanDetail({ plan, savePath }) {
   return (
     <div className="flight-plan-detail">
       <h5>{plan.title}</h5>
-      <FlightPlanMap initPath={plan.path} updatePath={updatePath} />
+      <FlightPlanMap initialPath={plan.path} savePath={savePath} />
     </div>
   );
 }

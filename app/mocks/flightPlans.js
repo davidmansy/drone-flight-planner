@@ -1,8 +1,3 @@
-const center = {
-  lat: 46.529787,
-  lng: 6.600821,
-};
-
 const flightPlans = [
   {
     title: "Test flight plan 1",

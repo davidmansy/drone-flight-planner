@@ -7,18 +7,28 @@ import { getUniqueId } from "../utils/utils";
 function FlightPlanner() {
   const [plans, setPlans] = React.useState(flightPlans);
   const [selectedPlan, setSelectedPlan] = React.useState(plans[0]);
+  const [editMode, setEditMode] = React.useState(false);
+
   const handleSelectedPlan = (plan) => setSelectedPlan(plan);
+
   const addPlan = () => {
     const newPlan = {
       title: "New flight plan",
       id: getUniqueId(),
       path: [],
     };
+    setEditMode(true);
     setPlans((plans) => [...plans, newPlan]);
     setSelectedPlan(newPlan);
   };
-  const updatePath = (newPath) => {
+
+  const saveSelectedPath = (newPath) => {
     selectedPlan.path = newPath;
+  };
+
+  const updateSelectedTitle = (title) => {
+    selectedPlan.title = title;
+    setEditMode(false);
   };
 
   return (
@@ -28,8 +38,11 @@ function FlightPlanner() {
         selectedPlan={selectedPlan}
         handleSelectedPlan={handleSelectedPlan}
         addPlan={addPlan}
+        editMode={editMode}
+        setEditMode={setEditMode}
+        updateSelectedTitle={updateSelectedTitle}
       />
-      <FlightPlanDetail plan={selectedPlan} updatePath={updatePath} />
+      <FlightPlanDetail plan={selectedPlan} savePath={saveSelectedPath} />
     </div>
   );
 }

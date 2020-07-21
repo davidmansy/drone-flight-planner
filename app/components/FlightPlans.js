@@ -1,6 +1,15 @@
 import React from "react";
+import FlightPlansItemInput from "./FlightPlansItemInput";
+import FlightPlansItem from "./FlightPlanItem";
 
-function FlightPlans({ plans, selectedPlan, handleSelectedPlan, addPlan }) {
+function FlightPlans({
+  plans,
+  selectedPlan,
+  handleSelectedPlan,
+  updateSelectedTitle,
+  addPlan,
+  editMode,
+}) {
   return (
     <div className="flight-plans">
       <div>
@@ -10,14 +19,18 @@ function FlightPlans({ plans, selectedPlan, handleSelectedPlan, addPlan }) {
           {plans.map((plan) => {
             return (
               <li key={plan.id}>
-                <div
-                  className={`plan-list-item ${
-                    selectedPlan === plan ? "selected" : ""
-                  }`}
-                  onClick={() => handleSelectedPlan(plan)}
-                >
-                  <span>{plan.title}</span>
-                </div>
+                {editMode && selectedPlan === plan ? (
+                  <FlightPlansItemInput
+                    initTitle={selectedPlan.title}
+                    updateTitle={updateSelectedTitle}
+                  />
+                ) : (
+                  <FlightPlansItem
+                    handleSelectedPlan={(e) => handleSelectedPlan(plan)}
+                    title={plan.title}
+                    isSelected={selectedPlan === plan}
+                  />
+                )}
               </li>
             );
           })}

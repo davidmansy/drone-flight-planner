@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import FlightPlanner from "./components/FlightPlanner";
+import "./index.css";
 
 function App() {
   return (

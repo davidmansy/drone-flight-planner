@@ -125,3 +125,10 @@ button:disabled {
   padding: 20px;
   width: 50%;
 }
+
+.flight-plans-item-container {
+  border-left: 5px solid black;
+  font-size: 15px;
+  height: 28px;
+  padding: 5px 0 0 15px;
+}
