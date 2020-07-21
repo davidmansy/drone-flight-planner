@@ -1,6 +1,6 @@
 import React from "react";
 
-function FlightPlans({ plans, selectedPlan, handleSelectedPlan }) {
+function FlightPlans({ plans, selectedPlan, handleSelectedPlan, addPlan }) {
   return (
     <div className="flight-plans">
       <div>
@@ -24,7 +24,7 @@ function FlightPlans({ plans, selectedPlan, handleSelectedPlan }) {
         </ul>
       </div>
       <div className="plan-list-add">
-        <button>
+        <button onClick={addPlan}>
           <span className="plan-list-add-symbol">+</span>
           <span>New Flight Plan</span>
         </button>
